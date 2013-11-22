@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostGresQlSampleApplication.Data", "PostGresQlSampleApplication.Data\PostGresQlSampleApplication.Data.csproj", "{341FAA0D-53D2-4D54-836A-E14C0FEC64ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostGresQlSampleApplication.Web", "PostGresQlSampleApplication.Web\PostGresQlSampleApplication.Web.csproj", "{2A7CBFB7-665B-46D4-8681-6343321491A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostGresQlSampleApplication.Domain", "PostGresQlSampleApplication.Domain\PostGresQlSampleApplication.Domain.csproj", "{7AE5B4BE-C4A4-4BF4-AD88-80D160C38AA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostGresQlSampleApplication.WebApiController", "PostGresQlSampleApplication.WebApiController\PostGresQlSampleApplication.WebApiController.csproj", "{ADE5EECD-0720-4EB1-B8D1-893589310CFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{341FAA0D-53D2-4D54-836A-E14C0FEC64ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{341FAA0D-53D2-4D54-836A-E14C0FEC64ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{341FAA0D-53D2-4D54-836A-E14C0FEC64ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{341FAA0D-53D2-4D54-836A-E14C0FEC64ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A7CBFB7-665B-46D4-8681-6343321491A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A7CBFB7-665B-46D4-8681-6343321491A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A7CBFB7-665B-46D4-8681-6343321491A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A7CBFB7-665B-46D4-8681-6343321491A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AE5B4BE-C4A4-4BF4-AD88-80D160C38AA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE5B4BE-C4A4-4BF4-AD88-80D160C38AA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE5B4BE-C4A4-4BF4-AD88-80D160C38AA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE5B4BE-C4A4-4BF4-AD88-80D160C38AA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADE5EECD-0720-4EB1-B8D1-893589310CFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADE5EECD-0720-4EB1-B8D1-893589310CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADE5EECD-0720-4EB1-B8D1-893589310CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE5EECD-0720-4EB1-B8D1-893589310CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
