@@ -37,8 +37,17 @@
     <Reference Include="Iesi.Collections">
       <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\packages\Npgsql.2.0.12.1\lib\net40\Mono.Security.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\packages\Npgsql.2.0.12.1\lib\net40\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="policy.2.0.Npgsql">
+      <HintPath>..\packages\Npgsql.2.0.12.1\lib\net40\policy.2.0.Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -57,6 +66,7 @@
     <Compile Include="Entity\Poco\Candidate.cs" />
     <Compile Include="Entity\Poco\EducationProfile.cs" />
     <Compile Include="Entity\Poco\WorkProfile.cs" />
+    <Compile Include="Infrstructure\HttpContextFactory.cs" />
     <Compile Include="Infrstructure\SessionManager.cs" />
     <Compile Include="Interface\ICandidateReposiotry.cs" />
     <Compile Include="Interface\IEducationProfileRepository.cs" />

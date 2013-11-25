@@ -10,19 +10,19 @@ namespace PostGresQlSampleApplication.Data
 
        public virtual int Id { get; set; }
 
-       public int CandidateId { get; set; }
+       public virtual int CandidateId { get; set; }
 
-       public string Employer { get; set; }
+       public virtual string Employer { get; set; }
 
-       public DateTime? WorkStartDate { get; set; }
+       public virtual DateTime? WorkStartDate { get; set; }
 
-       public DateTime? WorkEndDate { get; set; }
+       public virtual DateTime? WorkEndDate { get; set; }
 
-       public double Salary { get; set; }
+       public virtual double Salary { get; set; }
 
-       public string Designation { get; set; }
+       public virtual string Designation { get; set; }
 
-       public string ReasonForLeaving { get; set; }
+       public virtual string ReasonForLeaving { get; set; }
 
     }
 }

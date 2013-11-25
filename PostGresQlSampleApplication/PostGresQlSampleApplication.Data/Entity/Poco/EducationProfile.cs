@@ -9,17 +9,17 @@ namespace PostGresQlSampleApplication.Data
     {
         public virtual int Id { get; set; }
 
-        public int CandidateId { get; set; }
+        public virtual int CandidateId { get; set; }
 
-        public string College { get; set; }
+        public virtual string College { get; set; }
 
-        public string Degree { get; set; }
+        public virtual string Degree { get; set; }
 
-        public float percentage { get; set; }
+        public virtual float percentage { get; set; }
 
-        public DateTime? StartDate { get; set; }
+        public virtual DateTime? StartDate { get; set; }
 
-        public DateTime? EndDate { get; set; }
+        public virtual DateTime? EndDate { get; set; }
 
     }
 }

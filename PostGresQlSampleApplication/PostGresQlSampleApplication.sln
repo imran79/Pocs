@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostGresQlSampleApplication
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostGresQlSampleApplication.WebApiController", "PostGresQlSampleApplication.WebApiController\PostGresQlSampleApplication.WebApiController.csproj", "{ADE5EECD-0720-4EB1-B8D1-893589310CFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostGresQlSampleApplication.Test", "PostGresQlSampleApplication.Test\PostGresQlSampleApplication.Test.csproj", "{DFA949A2-2FE8-4F1C-8516-31F2BCE1124D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{ADE5EECD-0720-4EB1-B8D1-893589310CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADE5EECD-0720-4EB1-B8D1-893589310CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADE5EECD-0720-4EB1-B8D1-893589310CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFA949A2-2FE8-4F1C-8516-31F2BCE1124D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFA949A2-2FE8-4F1C-8516-31F2BCE1124D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFA949A2-2FE8-4F1C-8516-31F2BCE1124D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFA949A2-2FE8-4F1C-8516-31F2BCE1124D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

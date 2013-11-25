@@ -40,9 +40,9 @@ namespace PostGresQlSampleApplication.Data.Infrstructure
         {
             get
             {
-                if (!ManagedWebSessionContext.HasBind(HttpContext.Current, SessionFactory))
+                if (!ManagedWebSessionContext.HasBind(HttpContextFactory.Current, SessionFactory))
                 {
-                    ManagedWebSessionContext.Bind(HttpContext.Current, SessionFactory.OpenSession());
+                    ManagedWebSessionContext.Bind(HttpContextFactory.Current, SessionFactory.OpenSession());
                 }
                 return _sessionFactory.GetCurrentSession();
             }
@@ -65,13 +65,13 @@ namespace PostGresQlSampleApplication.Data.Infrstructure
             _sessionFactory = Fluently.Configure()
                         .Database(PostgreSQLConfiguration.PostgreSQL82
                         .Raw("hbm2ddl.keywords", "none")
-                        .ConnectionString(c => c.Is("Server=localhost;Port=5432;Database=cw;User Id=cw;Password=myPass;")))
+                        .ConnectionString(c => c.Is("Server=localhost;Port=5432;Database=test;User Id=postgres;")))
                         .Mappings(x => x.FluentMappings.AddFromAssemblyOf<T>())
                         .BuildSessionFactory();
 
-            if (HttpContext.Current != null && HttpContext.Current.ApplicationInstance != null)
+            if (HttpContextFactory.Current != null && HttpContextFactory.Current.ApplicationInstance != null)
             {
-                HttpContext.Current.ApplicationInstance.EndRequest += (sender, args) => CleanUp();
+                HttpContextFactory.Current.ApplicationInstance.EndRequest += (sender, args) => CleanUp();
             }
 
             _transaction = Session.BeginTransaction();
@@ -104,7 +104,7 @@ namespace PostGresQlSampleApplication.Data.Infrstructure
         /// </summary>
         public void CleanUp()
         {
-            CleanUp(HttpContext.Current, _sessionFactory);
+            CleanUp(HttpContextFactory.Current, _sessionFactory);
         }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace PostGresQlSampleApplication.Data.Infrstructure
         /// </summary>
         /// <param name="context">The context to which the session has been bound.</param>
         /// <param name="sessionFactory">The session factory that contains the session.</param>
-        public static void CleanUp(HttpContext context, ISessionFactory sessionFactory)
+        public static void CleanUp(HttpContextBase context, ISessionFactory sessionFactory)
         {
             ISession session = ManagedWebSessionContext.Unbind(context, sessionFactory);
 
