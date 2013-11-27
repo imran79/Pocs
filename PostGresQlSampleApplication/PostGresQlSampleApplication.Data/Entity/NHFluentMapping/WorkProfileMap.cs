@@ -10,7 +10,7 @@ namespace PostGresQlSampleApplication.Data
     {
         public WorkProfileMap()
         {
-            Schema("dbo");
+            //Schema("test");
             Table("WorkProfiles");
             Id(x => x.Id).Column("WorkProfileId");
             Map(x => x.Designation);
@@ -19,6 +19,7 @@ namespace PostGresQlSampleApplication.Data
             Map(x => x.Salary);
             Map(x => x.WorkEndDate);
             Map(x => x.WorkStartDate);
+            References(x => x.Candidate);
 
         }
     }

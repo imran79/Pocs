@@ -8,9 +8,7 @@ namespace PostGresQlSampleApplication.Data
    public class WorkProfile 
     {
 
-       public virtual int Id { get; set; }
-
-       public virtual int CandidateId { get; set; }
+       public virtual int Id { get; set; }      
 
        public virtual string Employer { get; set; }
 
@@ -23,6 +21,8 @@ namespace PostGresQlSampleApplication.Data
        public virtual string Designation { get; set; }
 
        public virtual string ReasonForLeaving { get; set; }
+
+       public virtual Candidate Candidate { get; set; }
 
     }
 }

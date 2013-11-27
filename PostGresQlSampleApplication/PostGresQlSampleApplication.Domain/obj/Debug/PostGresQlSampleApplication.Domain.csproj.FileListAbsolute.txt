@@ -1,0 +1,5 @@
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Domain\bin\Debug\PostGresQlSampleApplication.Domain.dll
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Domain\bin\Debug\PostGresQlSampleApplication.Domain.pdb
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Domain\obj\Debug\ResolveAssemblyReference.cache
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Domain\obj\Debug\PostGresQlSampleApplication.Domain.dll
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Domain\obj\Debug\PostGresQlSampleApplication.Domain.pdb

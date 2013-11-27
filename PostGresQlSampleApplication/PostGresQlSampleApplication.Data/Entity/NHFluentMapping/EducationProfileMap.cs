@@ -11,14 +11,15 @@ namespace PostGresQlSampleApplication.Data
 
         public EducationProfileMap()
         {
-            Schema("dbo");
+            //Schema("test");
             Table("EducationProfile");
             Id(x => x.Id).Column("EducationProfileId");
             Map(x => x.College);
             Map(x => x.Degree);
             Map(x => x.EndDate);
             Map(x => x.StartDate);
-            Map(x => x.percentage);           
+            Map(x => x.percentage);
+            References(x => x.Candidate);
         }
     }
 }

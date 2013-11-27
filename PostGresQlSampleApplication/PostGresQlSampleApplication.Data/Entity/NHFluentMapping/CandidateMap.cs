@@ -10,8 +10,8 @@ namespace PostGresQlSampleApplication.Data
     {
         public CandidateMap()
         {
-            Schema("dbo");
-            Table("Employees");
+            //Schema("test");
+            Table("Candidates");
             Id(x => x.Id).Column("CandidateId");
             Map(x => x.Name);
             Map(x => x.IsMale);
@@ -22,17 +22,15 @@ namespace PostGresQlSampleApplication.Data
             Map(x => x.Address);
 
             HasMany(x => x.EducationProfileCollection)
-  .KeyColumn("CandidateId")
   .Inverse()
   .Cascade.AllDeleteOrphan();
 
             HasMany(x => x.WorkProfileCollection)
- .KeyColumn("CandidateId")
  .Inverse()
  .Cascade.AllDeleteOrphan();
 
 
         }
-     
+
     }
 }

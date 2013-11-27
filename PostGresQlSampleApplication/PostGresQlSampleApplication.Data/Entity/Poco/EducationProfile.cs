@@ -7,9 +7,7 @@ namespace PostGresQlSampleApplication.Data
 {
     public class EducationProfile 
     {
-        public virtual int Id { get; set; }
-
-        public virtual int CandidateId { get; set; }
+        public virtual int Id { get; set; }       
 
         public virtual string College { get; set; }
 
@@ -20,6 +18,8 @@ namespace PostGresQlSampleApplication.Data
         public virtual DateTime? StartDate { get; set; }
 
         public virtual DateTime? EndDate { get; set; }
+
+        public virtual Candidate Candidate { get; set; }
 
     }
 }

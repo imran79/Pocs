@@ -1,0 +1,5 @@
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Web\bin\PostGresQlSampleApplication.Web.dll
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Web\bin\PostGresQlSampleApplication.Web.pdb
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Web\obj\Debug\ResolveAssemblyReference.cache
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Web\obj\Debug\PostGresQlSampleApplication.Web.dll
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Web\obj\Debug\PostGresQlSampleApplication.Web.pdb

@@ -8,6 +8,7 @@ using NHibernate.Context;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using System.Web;
+using NHibernate.Tool.hbm2ddl;
 
 namespace PostGresQlSampleApplication.Data.Infrstructure
 {
@@ -40,11 +41,25 @@ namespace PostGresQlSampleApplication.Data.Infrstructure
         {
             get
             {
-                if (!ManagedWebSessionContext.HasBind(HttpContextFactory.Current, SessionFactory))
+                try
                 {
-                    ManagedWebSessionContext.Bind(HttpContextFactory.Current, SessionFactory.OpenSession());
+                    // when session is getting initialize through web application
+
+                    if (!ManagedWebSessionContext.HasBind(HttpContext.Current, SessionFactory))
+                    {
+                        ManagedWebSessionContext.Bind(HttpContext.Current, SessionFactory.OpenSession());
+                    }
+                    return _sessionFactory.GetCurrentSession();
                 }
-                return _sessionFactory.GetCurrentSession();
+                catch (Exception)
+                {
+                    // when session is getting initialize through test case  as ManagedWebSessionContext 
+                    // is not able to bind the current session.
+                    if (!CurrentSessionContext.HasBind(SessionFactory))
+                        CurrentSessionContext.Bind(SessionFactory.OpenSession());
+                    return _sessionFactory.GetCurrentSession();
+                }
+               
             }
         }
 
@@ -65,13 +80,15 @@ namespace PostGresQlSampleApplication.Data.Infrstructure
             _sessionFactory = Fluently.Configure()
                         .Database(PostgreSQLConfiguration.PostgreSQL82
                         .Raw("hbm2ddl.keywords", "none")
-                        .ConnectionString(c => c.Is("Server=localhost;Port=5432;Database=test;User Id=postgres;")))
+                        .ConnectionString(c => c.Is("Server=localhost;Port=5432;Database=test;User Id=postgres;password=imran79_lko")))
+                        .ExposeConfiguration(c => c.SetProperty("current_session_context_class", "web"))
+                        .ExposeConfiguration(cfg => new SchemaUpdate(cfg).Execute(false, true))
                         .Mappings(x => x.FluentMappings.AddFromAssemblyOf<T>())
                         .BuildSessionFactory();
 
-            if (HttpContextFactory.Current != null && HttpContextFactory.Current.ApplicationInstance != null)
+            if (HttpContext.Current != null && HttpContext.Current.ApplicationInstance != null)
             {
-                HttpContextFactory.Current.ApplicationInstance.EndRequest += (sender, args) => CleanUp();
+                HttpContext.Current.ApplicationInstance.EndRequest += (sender, args) => CleanUp();
             }
 
             _transaction = Session.BeginTransaction();
@@ -104,7 +121,7 @@ namespace PostGresQlSampleApplication.Data.Infrstructure
         /// </summary>
         public void CleanUp()
         {
-            CleanUp(HttpContextFactory.Current, _sessionFactory);
+            CleanUp(HttpContext.Current, _sessionFactory);
         }
 
         /// <summary>
@@ -112,7 +129,7 @@ namespace PostGresQlSampleApplication.Data.Infrstructure
         /// </summary>
         /// <param name="context">The context to which the session has been bound.</param>
         /// <param name="sessionFactory">The session factory that contains the session.</param>
-        public static void CleanUp(HttpContextBase context, ISessionFactory sessionFactory)
+        public static void CleanUp(HttpContext context, ISessionFactory sessionFactory)
         {
             ISession session = ManagedWebSessionContext.Unbind(context, sessionFactory);
 

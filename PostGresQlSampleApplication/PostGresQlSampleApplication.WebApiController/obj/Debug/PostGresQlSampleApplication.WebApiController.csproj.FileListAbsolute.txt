@@ -1,0 +1,5 @@
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.WebApiController\bin\Debug\PostGresQlSampleApplication.WebApiController.dll
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.WebApiController\bin\Debug\PostGresQlSampleApplication.WebApiController.pdb
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.WebApiController\obj\Debug\ResolveAssemblyReference.cache
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.WebApiController\obj\Debug\PostGresQlSampleApplication.WebApiController.dll
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.WebApiController\obj\Debug\PostGresQlSampleApplication.WebApiController.pdb
