@@ -21,13 +21,13 @@ namespace PostGresQlSampleApplication.Data
             Map(x => x.CandidateType);
             Map(x => x.Address);
 
-            HasMany(x => x.EducationProfileCollection)
-  .Inverse()
-  .Cascade.AllDeleteOrphan();
+           HasMany(x => x.EducationProfileCollection)
+   .Inverse()
+   .Cascade.AllDeleteOrphan();
 
-            HasMany(x => x.WorkProfileCollection)
- .Inverse()
- .Cascade.AllDeleteOrphan();
+           HasMany(x => x.WorkProfileCollection)
+   .Inverse()
+   .Cascade.AllDeleteOrphan();
 
 
         }

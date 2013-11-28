@@ -16,3 +16,8 @@ E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Data\bin\De
 E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Data\bin\Debug\Npgsql.pdb
 E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Data\bin\Debug\Npgsql.xml
 E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Data\bin\Debug\policy.2.0.Npgsql.config
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Data\bin\Debug\PostGresQlSampleApplication.Data.dll.config
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Data\bin\Debug\EntityFramework.dll
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Data\bin\Debug\EntityFramework.xml
+E:\Pocs\Pocs\PostGresQlSampleApplication\PostGresQlSampleApplication.Data\bin\Debug\EntityFramework.SqlServer.xml

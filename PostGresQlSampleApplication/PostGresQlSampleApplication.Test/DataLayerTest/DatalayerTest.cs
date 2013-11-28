@@ -64,7 +64,7 @@ namespace PostGresQlSampleApplication.Test.DataLayerTest
             CandidateRepository repository = new CandidateRepository();
             repository.Create(candidate);
 
-            Candidate fetchCandidate = repository.RetrieveById(1);
+            Candidate fetchCandidate = repository.GetById(1);
 
             Assert.IsNotNull(fetchCandidate);
 

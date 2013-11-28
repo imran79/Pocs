@@ -13,7 +13,8 @@ namespace PostGresQlSampleApplication.Data
         public Repository()
             : this(new SessionManager<T>())
         {
-
+            // if you are going to put the condition here the probability is it will be very hard 
+            // to initialize the
         }
 
 
@@ -29,7 +30,7 @@ namespace PostGresQlSampleApplication.Data
         /// </summary>
         /// <param name="id">Id of the object to retrieve.</param>
         /// <returns>The object instance to use in the application.</returns>
-        public T RetrieveById(int id)
+        public T GetById(int id)
         {
             return _sessionManager.Session.Get<T>(id);
         }
