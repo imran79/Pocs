@@ -18,9 +18,9 @@ namespace PostGresQlSampleApplication.Test.DataLayerTest
     {
 
         public DatalayerTest()
-       {
+        {
 
-       }
+        }
 
         [SetUp]
         public void SetUp()
@@ -35,11 +35,11 @@ namespace PostGresQlSampleApplication.Test.DataLayerTest
         [Test]
         public void AddCandidateToRepositoryTest()
         {
-            HttpContextBase httpContextBase = MoqMvcMockHelpers.FakeHttpContext("http://localhost:3475/");
+            // HttpContextBase httpContextBase = MoqMvcMockHelpers.FakeHttpContext("~/");
 
-        //    HttpContext.Current = new HttpContext(
-        //new HttpRequest(null, "http://localhost:3475/", null),
-        //new HttpResponse(null));
+            HttpContext.Current = new HttpContext(
+        new HttpRequest(null, "http://localhost:3475/", null),
+        new HttpResponse(null));
             Candidate candidate = new Candidate();
             candidate.Name = "Imran";
             candidate.IsMale = true;
@@ -62,12 +62,11 @@ namespace PostGresQlSampleApplication.Test.DataLayerTest
             workProfile.Designation = "Team Lead";
             workProfile.Employer = "HirePro Consulting Private Limited";
             workProfile.ReasonForLeaving = "";
-            workProfile.WorkStartDate = new DateTime(2007,6,1);
+            workProfile.WorkStartDate = new DateTime(2007, 6, 1);
             workProfile.WorkEndDate = new DateTime(2012, 10, 1);
             workProfile.Candidate = candidate;
             candidate.WorkProfileCollection.Add(workProfile);
-           
-           
+
             CandidateRepository repository = new CandidateRepository();
             repository.Create(candidate);
 
