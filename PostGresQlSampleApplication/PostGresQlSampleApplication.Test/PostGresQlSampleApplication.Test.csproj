@@ -61,6 +61,8 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DataLayerTest\DatalayerTest.cs" />
+    <Compile Include="MockTestHelper\MoqMvcMockHelpers.cs" />
+    <Compile Include="MockTestHelper\RhinoMvcMockHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

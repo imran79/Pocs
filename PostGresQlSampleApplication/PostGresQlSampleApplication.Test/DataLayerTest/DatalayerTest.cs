@@ -7,14 +7,20 @@ using NUnit.Framework;
 using PostGresQlSampleApplication.Data;
 using PostGresQlSampleApplication.Data.Repository;
 using System.Web;
-using Moq;
+//using Moq;
 using PostGresQlSampleApplication.Data.Infrstructure;
+using PostGresQlSampleApplication.Test.MockTestHelper;
 
 namespace PostGresQlSampleApplication.Test.DataLayerTest
 {
-    [TestFixture]
+    [SetUpFixture]
     public class DatalayerTest
     {
+
+        public DatalayerTest()
+       {
+
+       }
 
         [SetUp]
         public void SetUp()
@@ -29,10 +35,11 @@ namespace PostGresQlSampleApplication.Test.DataLayerTest
         [Test]
         public void AddCandidateToRepositoryTest()
         {
+            HttpContextBase httpContextBase = MoqMvcMockHelpers.FakeHttpContext("http://localhost:3475/");
 
-            HttpContext.Current = new HttpContext(
-        new HttpRequest(null, "http://localhost:3475/", null),
-        new HttpResponse(null));
+        //    HttpContext.Current = new HttpContext(
+        //new HttpRequest(null, "http://localhost:3475/", null),
+        //new HttpResponse(null));
             Candidate candidate = new Candidate();
             candidate.Name = "Imran";
             candidate.IsMale = true;
